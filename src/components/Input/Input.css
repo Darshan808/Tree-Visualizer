@@ -1,0 +1,15 @@
+input{
+    background-color: #153540;
+    border: 2px solid #0b171f;
+    border-radius: 4px;
+    padding-left: 10px;
+    height: 2rem;
+    width: 18rem;
+    margin-right: 1rem;
+    color: white;
+    font-size: larger;
+}
+.visualize{
+    display: inline-block;
+    margin: 1rem 1rem 0;
+}
