@@ -3,9 +3,10 @@
 }
 
 #container {
-  /* display: flex; */
-  /* align-items: center; */
+  display: flex; 
+  align-items: center; 
   margin-top: 2rem;
+  width: 100%;
 }
 
 .tree-container {
@@ -13,11 +14,32 @@
   border: 2px solid #0f1b21;
   border-radius: 20px;
 }
+
+body.dark .tree-container {
+  background-color: #153540;
+  border: 2px solid #0f1b21;
+}
+
+body.light .tree-container {
+  background-color: #e0e0e0;
+  border: 2px solid #999;
+}
+
 .array-container {
   margin: 2rem 0;
   background-color: #153540;
   border: 2px solid #0f1b21;
   border-radius: 8px;
+}
+
+body.dark .array-container {
+  background-color: #153540;
+  border: 2px solid #0f1b21;
+}
+
+body.light .array-container {
+  background-color: #e0e0e0;
+  border: 2px solid #999;
 }
 
 .node-text {
@@ -32,4 +54,15 @@ circle:hover{
 
 .hide{
   display: none;
+}
+
+body.dark circle:hover {
+  fill: #4466af;
+  stroke: #8ab4f8;
+}
+
+
+body.light circle:hover {
+  fill: #4466af;
+  stroke: #8ab4f8;
 }

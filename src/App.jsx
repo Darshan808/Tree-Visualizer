@@ -8,7 +8,7 @@ import {
 import { visualize } from "./algorithms/visualize";
 import { getBinaryTree, getMaxHeap, getBST } from "./algorithms/convert";
 import Traversals from "./components/Traversals/Traversals";
-import { useState } from "react";
+import { useState, useEffect  } from "react";
 import {
   inOrderTraversal,
   preOrderTraversal,
@@ -16,11 +16,23 @@ import {
   levelOrderTraversal,
 } from "./algorithms/traverse";
 import InfoBox from "./components/InfoBox/InfoBox";
+import ThemeToggle from "./components/ThemeToggle/ThemeToggle";
+
 
 function App() {
   const [treeArr, setTreeArr] = useState([]);
   const [isVisualized, setIsVisualized] = useState(false);
   const [text, setText] = useState(null);
+
+  const [theme, setTheme] = useState("dark");
+
+  useEffect(() => {
+    document.body.className = theme; 
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
 
   const handleInfoText = (type) => {
     let infoText =
@@ -86,6 +98,9 @@ function App() {
       <TreeContainer />
       {isVisualized && <Traversals onClick={handleTraverseClick} />}
       <ArrayContainer />
+
+      <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+
     </>
   );
 }

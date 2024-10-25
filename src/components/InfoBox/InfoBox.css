@@ -1,6 +1,6 @@
 .info-box{
     background-color: #153540;
-    border: 3px solid #0b171f;
+    border: none;
     border-radius: 6px;
     padding: 0 10px;
     /* width: 400px; */
@@ -10,4 +10,14 @@
     display: flex;
     align-items: center;
     margin: 1.5rem auto 1rem auto;
+}
+
+body.dark .info-box {
+    background-color: #153540;
+    color: #fff;
+}
+
+body.light .info-box {
+    background-color: #e0e0e0;
+    color: #333;
 }
