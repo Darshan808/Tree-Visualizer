@@ -1,13 +1,26 @@
 :root {
   color: rgba(255, 255, 255, 0.87);
   /* background-color: #242424; */
-  background-color: #0f1b21;
+  /* background-color: #0f1b21; */
 }
 
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body.light {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+body.dark {
+  background-color: #0f1b21;
+  color: #f9f9f9;
 }
 
 .button {
@@ -24,6 +37,30 @@ body {
   transition: border-color 0.25s;
   color: white;
 }
+
+body.dark .button {
+  background-color: #153540;
+  border: 2px solid #0b171f;
+  color: #fff;
+}
+
+body.light .button {
+  background-color: #e0e0e0;
+  border: 2px solid #ccc;
+  color: #333;
+}
+
 .button:hover {
+  border-color: #646cff;
+}
+
+body.dark .button:hover {
+  background-color: #1b4d5e;
+  border-color: #8ab4f8;
+}
+
+
+body.light .button:hover {
+  background-color: #d0d0d0;
   border-color: #646cff;
 }
